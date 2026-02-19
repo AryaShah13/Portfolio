@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya Shah | AI/ML Intern & Aspiring Data Engineer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#8b5cf6',
+                        accent: '#f472b6',
+                        dark: '#0f172a',
+                        darker: '#020617'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="gradient-bg overflow-x-hidden">
+
+    <!-- Particle Background -->
+    <canvas id="particles"></canvas>
+
+    <!-- Navigation -->
+    <nav class="bg-dark/90 backdrop-blur-md shadow-lg fixed w-full z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text flex items-center gap-2">
+                <i class="bi bi-braces-asterisk"></i> Arya Shah
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-person"></i> About</a>
+                <a href="#skills" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-lightning"></i> Skills</a>
+                <a href="#experience" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-briefcase"></i> Experience</a>
+                <a href="#projects" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-code-square"></i> Projects</a>
+                <a href="#achievements" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-trophy"></i> Achievements</a>
+                <a href="#contact" class="hover:text-primary transition flex items-center gap-1"><i class="bi bi-envelope"></i> Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 focus:outline-none hover:text-primary transition">
+                <i class="bi bi-list text-3xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-t border-gray-800">
+            <a href="#about" class="block py-3 px-6 hover:bg-gray-800 transition">About</a>
+            <a href="#skills" class="block py-3 px-6 hover:bg-gray-800 transition">Skills</a>
+            <a href="#experience" class="block py-3 px-6 hover:bg-gray-800 transition">Experience</a>
+            <a href="#projects" class="block py-3 px-6 hover:bg-gray-800 transition">Projects</a>
+            <a href="#achievements" class="block py-3 px-6 hover:bg-gray-800 transition">Achievements</a>
+            <a href="#contact" class="block py-3 px-6 hover:bg-gray-800 transition">Contact</a>
+        </div>
+    </nav>
+
+   <!-- Hero Section -->
+<section class="pt-32 pb-20 relative overflow-hidden">
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+            <div class="inline-block mb-4 px-4 py-1.5 bg-primary/10 border border-primary/30 rounded-full">
+                <span class="text-primary text-sm font-medium">👋 Welcome to my portfolio</span>
+            </div>
+            <h2 class="text-xl text-gray-400 mb-2 code-font">Hello, I'm</h2>
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 gradient-text">Arya Shah</h1>
+            
+            <!-- Typing Animation -->
+            <div class="text-xl md:text-2xl font-semibold text-gray-300 mb-6 code-font h-10">
+                <span class="typing">AI/ML Intern & Aspiring Data Engineer</span>
+            </div>
+            
+            <p class="text-gray-400 mb-10 leading-relaxed text-lg max-w-2xl mx-auto">
+                Building intelligent data pipelines and ML solutions at TCS. 
+                Passionate about NLP, Computer Vision, and scalable cloud analytics.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+                <a href="./Arya_Shah_.pdf" download class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3.5 rounded-lg shadow-lg hover:shadow-primary/50 transition flex items-center justify-center gap-2 glow">
+                    <i class="bi bi-download"></i> Download Resume
+                </a>
+                <a href="#projects" class="border border-primary text-primary px-8 py-3.5 rounded-lg hover:bg-primary/10 transition flex items-center justify-center gap-2">
+                    <i class="bi bi-eye"></i> View Projects
+                </a>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="flex gap-4 justify-center">
+                <a href="https://linkedin.com/in/arya-shah-6a4047283" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-[#0a66c2] transition glow">
+                    <i class="bi bi-linkedin text-white text-xl"></i>
+                </a>
+                <a href="https://github.com/AryaShah13" target="_blank" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition glow">
+                    <i class="bi bi-github text-white text-xl"></i>
+                </a>
+                <a href="mailto:ahshah1306@gmail.com" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-600 transition glow">
+                    <i class="bi bi-envelope text-white text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <i class="bi bi-arrow-down text-2xl text-gray-500"></i>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-darker/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">About Me</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            
+            <div class="max-w-4xl mx-auto terminal" data-aos="fade-up">
+                <div class="terminal-header">
+                    <div class="terminal-dot bg-red-500"></div>
+                    <div class="terminal-dot bg-yellow-500"></div>
+                    <div class="terminal-dot bg-green-500"></div>
+                    <span class="ml-4 text-sm text-gray-300">about_me.py</span>
+                </div>
+                <div class="p-6 code-font text-sm md:text-base text-gray-300 space-y-2">
+                    <p><span class="text-primary">class</span> <span class="text-accent">AryaShah</span>:</p>
+                    <p class="pl-4"><span class="text-gray-500"># AI/ML Intern & Aspiring Data Engineer</span></p>
+                    <p class="pl-4">def <span class="text-secondary">__init__</span>(self):</p>
+                    <p class="pl-8">self.role = <span class="text-green-400">"AI/ML Intern at TCS"</span></p>
+                    <p class="pl-8">self.focus = [<span class="text-green-400">"ML Pipelines"</span>, <span class="text-green-400">"Snowflake Integration"</span>, <span class="text-green-400">"Power BI Analytics"</span>]</p>
+                    <p class="pl-8">self.mission = <span class="text-green-400">"Transform data into actionable intelligence"</span></p>
+                    <p class="pl-4">def <span class="text-secondary">deliver</span>(self, challenge):</p>
+                    <p class="pl-8"><span class="text-primary">return</span> <span class="text-green-400">"Scalable, Production-Ready Solution"</span></p>
+                    <br>
+                    <p class="text-gray-400">// Currently contributing to enterprise ML systems at TCS, with prior experience at neeti.ai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-20">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Technical Toolkit</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Languages -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="bi bi-code-slash text-primary text-2xl"></i>
+                    <h3 class="text-xl font-bold">Languages</h3>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-database text-gray-400 skill-icon-text"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="skill-icon">
+                        <span>Java</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="skill-icon">
+                        <span>C++</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R" class="skill-icon">
+                        <span>R</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI/ML Stack -->
+
+
+
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="100">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="bi bi-braces-asterisk text-secondary text-2xl"></i>
+                    <h3 class="text-xl font-bold">AI/ML Frameworks</h3>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <span class="tech-badge">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow" class="badge-icon">
+                        TensorFlow
+                    </span>
+                    <span class="tech-badge">Keras</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">BERT</span>
+                    <span class="tech-badge">CNN</span>
+                    <span class="tech-badge">NLP</span>
+                    <span class="tech-badge">Prophet</span>
+                </div>
+            </div>
+
+            <!-- Skill Category 3 - Data Platforms -->
+<div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="400">
+    <div class="flex items-center gap-3 mb-4">
+        <i class="bi bi-database text-accent text-2xl"></i>
+        <h3 class="text-xl font-bold">Data Platforms</h3>
+    </div>
+    <div class="space-y-3">
+<!-- Power BI -->
+        <div class="flex items-center gap-3 bg-gray-800/50 p-3 rounded-lg">
+            <i class="bi bi-graph-up-arrow text-yellow-400 text-xl"></i>
+            <span class="text-sm">Power BI</span>
+        </div>
+
+        <!-- Snowflake -->
+        <div class="flex items-center gap-3 bg-gray-800/50 p-3 rounded-lg">
+            <i class="bi bi-snow text-blue-400 text-xl"></i>
+            <span class="text-sm">Snowflake</span>
+        </div>
+        
+        <!-- Databricks -->
+        <div class="flex items-center gap-3 bg-gray-800/50 p-3 rounded-lg">
+            <i class="bi bi-fire text-orange-500 text-xl"></i>
+            <span class="text-sm">Databricks</span>
+        </div>
+    </div>
+</div>
+
+            <!-- Web Technologies -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="bi bi-browser-chrome text-cyan-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Web Technologies</h3>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-html text-orange-500 skill-icon-text"></i>
+                        <span>HTML</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-filetype-css text-blue-500 skill-icon-text"></i>
+                        <span>CSS</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" class="skill-icon">
+                        <span>Tailwind</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" class="skill-icon">
+                        <span>Bootstrap</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">
+                        <span>PHP</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="400">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="bi bi-hdd-stack text-green-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Databases</h3>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" class="skill-icon">
+                        <span>MySQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-database text-gray-400 skill-icon-text"></i>
+                        <span>Oracle SQL</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-database text-gray-400 skill-icon-text"></i>
+                        <span>MS SQL Server</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" class="skill-icon">
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools & Others -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="500">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="bi bi-tools text-yellow-400 text-2xl"></i>
+                    <h3 class="text-xl font-bold">Tools & Others</h3>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">
+                        <span>Git/GitHub</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-journal-code text-gray-400 skill-icon-text"></i>
+                        <span>Jupyter</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="bi bi-google skill-icon-text text-blue-500"></i>
+                        <span>Google Colab</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon">
+                        <span>Flask</span>
+                    </div>
+                    <div class="skill-item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter" class="skill-icon">
+                        <span>Flutter</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+    <!-- Achievements Section -->
+    <section id="achievements" class="py-20 bg-darker/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">🏆 Achievements & Certifications</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Hackathon -->
+                <div class="achievement-card bg-dark border border-gray-800 rounded-xl p-6 card-lift relative overflow-hidden group" data-aos="fade-up">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center glow">
+                                <i class="bi bi-trophy text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold gradient-text">2nd Prize - National Hackathon</h3>
+                                <p class="text-sm text-gray-400">KLEOS 3.0 | Dr. D.Y. Patil Rait Institute | 2025</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Built an innovative AI-powered solution under tight deadlines. Led a team of 4 to develop a real-time analytics prototype.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-yellow">Team Leadership</span>
+                            <span class="badge badge-yellow">AI Innovation</span>
+                            <span class="badge badge-yellow">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NPTEL -->
+                <div class="achievement-card bg-dark border border-gray-800 rounded-xl p-6 card-lift relative overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center glow">
+                                <i class="bi bi-patch-check text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold gradient-text">NPTEL Certification</h3>
+                                <p class="text-sm text-gray-400">IIT Guwahati | Computer Graphics</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Completed advanced certification in Computer Graphics. Mastered rendering algorithms and 3D visualization techniques.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-blue">IIT Certified</span>
+                            <span class="badge badge-blue">Computer Graphics</span>
+                            <span class="badge badge-blue">Online Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sports Leadership -->
+                <div class="achievement-card bg-dark border border-gray-800 rounded-xl p-6 card-lift relative overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-full -translate-y-1/2 translate-x-1/2 blur-xl group-hover:scale-150 transition-transform duration-500"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center glow">
+                                <i class="bi bi-people text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold gradient-text">Sports Leadership</h3>
+                                <p class="text-sm text-gray-400">School Captain & Vice Captain</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Served as Group Captain and Vice Captain. Led teams in inter-school competitions, fostering discipline and strategic thinking.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="badge badge-green">Leadership</span>
+                            <span class="badge badge-green">Team Management</span>
+                            <span class="badge badge-green">Sports</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="300">
+                <div class="bg-dark border border-gray-800 rounded-lg p-4 text-center hover:border-primary/50 transition">
+                    <div class="text-3xl font-bold gradient-text counter" data-target="15">0</div>
+                    <p class="text-sm text-gray-400 mt-1">Projects</p>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-lg p-4 text-center hover:border-primary/50 transition">
+                    <div class="text-3xl font-bold gradient-text counter" data-target="4">0</div>
+                    <p class="text-sm text-gray-400 mt-1">Internships</p>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-lg p-4 text-center hover:border-primary/50 transition">
+                    <div class="text-3xl font-bold gradient-text counter" data-target="2">0</div>
+                    <p class="text-sm text-gray-400 mt-1">Certifications</p>
+                </div>
+                <div class="bg-dark border border-gray-800 rounded-lg p-4 text-center hover:border-primary/50 transition">
+                    <div class="text-3xl font-bold gradient-text counter" data-target="1">0</div>
+                    <p class="text-sm text-gray-400 mt-1">Awards</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Experience Section -->
+<section id="experience" class="py-20 bg-darker/50">
+    <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Professional Journey</h2>
+        <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+        
+        <div class="max-w-4xl mx-auto space-y-8">
+            
+            <!-- TCS - Current (Just Started - Confidential) -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+                <div class="flex flex-col md:flex-row md:items-start gap-4 relative z-10">
+                    <!-- TCS Logo Placeholder -->
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center flex-shrink-0 glow">
+                        <span class="text-white font-bold text-sm text-center leading-tight">TCS</span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold gradient-text">AI/ML Intern</h3>
+                                <p class="text-primary font-medium">Tata Consultancy Services (TCS)</p>
+                                <span class="text-xs text-green-400 flex items-center gap-1 mt-1">
+                                    <i class="bi bi-circle-fill"></i> Currently Active • Just Started
+                                </span>
+                            </div>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm mt-2 md:mt-0 whitespace-nowrap">
+                                Present
+                            </span>
+                        </div>
+                        <p class="text-gray-400 mt-4 italic">
+                            🔒 Currently onboarding and contributing to enterprise AI/ML initiatives. 
+                            Project details will be updated upon completion and approval.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- neeti.ai - Completed (All Technical Work Here) -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+                <div class="flex flex-col md:flex-row md:items-start gap-4 relative z-10">
+                    <!-- neeti.ai Logo Placeholder -->
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center flex-shrink-0 glow">
+                        <i class="bi bi-robot text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold gradient-text">AI Research Intern</h3>
+                                <p class="text-secondary font-medium">neeti.ai</p>
+                                <span class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                                    <i class="bi bi-check-circle-fill text-green-400"></i> Completed • 2 Months
+                                </span>
+                            </div>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm mt-2 md:mt-0 whitespace-nowrap">
+                                December 2025 – February 2026
+                            </span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                            <li>Designed prompt engineering strategies to generate clinically relevant questions from patient notes using multiple AI models</li>
+                            <li>Built time series forecasting models (Prophet, ARIMA) for demand and trend prediction using historical data patterns</li>
+                            <li>Developed end-to-end ML pipelines with feature selection and preprocessing to accelerate model training</li>
+                            <li>Integrated Snowflake data workflows with Power BI dashboards using DAX & M Query for real-time analytics</li>
+                            <li>Researched and optimized BERT-based models for domain-specific question answering in healthcare</li>
+                            <li>Collaborated on data annotation pipelines and model evaluation frameworks for production readiness</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PGP Glass -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-600 to-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 glow">
+                        <i class="bi bi-graph-up text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold gradient-text">Data Analytics Intern</h3>
+                                <p class="text-green-400 font-medium">PGP Glass Private Limited</p>
+                                <span class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                                    <i class="bi bi-check-circle-fill text-green-400"></i> Completed • 1 Months
+                                </span>
+                            </div>
+                            <span class="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">June 2025 – July 2025</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                            <li>Developed Power BI dashboards for quality metrics, rejection trends, and predictive maintenance</li>
+                            <li>Utilized Databricks for scalable big data processing and analytics workflows</li>
+                            <li>Enhanced AngularJS Logbook application with dynamic JSON-based UI configurations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mamo Techno Lab -->
+            <div class="bg-dark border border-gray-800 rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="300">
+                <div class="flex flex-col md:flex-row md:items-start gap-4">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-600 to-amber-600 rounded-xl flex items-center justify-center flex-shrink-0 glow">
+                        <i class="bi bi-code-square text-white text-2xl"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                            <div>
+                                <h3 class="text-xl font-bold gradient-text">Web Development Intern</h3>
+                                <p class="text-orange-400 font-medium">Mamo Techno Lab LLP</p>
+                                 <span class="text-xs text-gray-500 flex items-center gap-1 mt-1">
+                                    <i class="bi bi-check-circle-fill text-green-400"></i> Completed • 1 Months
+                                </span>
+                            </div>
+                            <span class="bg-orange-500/20 text-orange-400 px-3 py-1 rounded-full text-sm mt-2 md:mt-0">Dec 2024 – Jan 2025</span>
+                        </div>
+                        <ul class="list-disc list-inside text-gray-400 space-y-2 mt-4">
+                            <li>Built responsive e-commerce frontend with HTML, CSS, JavaScript</li>
+                            <li>Developed full-stack PHP/MySQL application with Tailwind & Bootstrap</li>
+                            <li>Implemented security best practices including encryption & SQL injection prevention</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Featured Projects</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Project 1 -->
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden card-lift" data-aos="fade-up">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="bi bi-robot text-primary text-xl"></i>
+                            <h3 class="text-lg font-bold">AI Mock Interview System</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">BERT-based answer evaluation with automated scoring</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge-sm">BERT</span>
+                            <span class="tech-badge-sm">NLP</span>
+                            <span class="tech-badge-sm">MongoDB</span>
+                            <span class="tech-badge-sm">Node.js</span>
+                        </div>
+                        <a href="#" class="text-primary font-semibold hover:text-secondary transition text-sm flex items-center gap-1">
+                            View Details <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden card-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="bi bi-flower1 text-secondary text-xl"></i>
+                            <h3 class="text-lg font-bold">AI Soil Analysis System</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">CNN crop recommendation with Flutter deployment</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge-sm">CNN</span>
+                            <span class="tech-badge-sm">Random Forest</span>
+                            <span class="tech-badge-sm">Flask</span>
+                            <span class="tech-badge-sm">Flutter</span>
+                        </div>
+                        <a href="#" class="text-secondary font-semibold hover:text-primary transition text-sm flex items-center gap-1">
+                            View Details <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-dark border border-gray-800 rounded-xl overflow-hidden card-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="bi bi-airplane text-accent text-xl"></i>
+                            <h3 class="text-lg font-bold">Flight Booking Platform</h3>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Full-stack PHP/MySQL app with Tailwind UI</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge-sm">PHP</span>
+                            <span class="tech-badge-sm">MySQL</span>
+                            <span class="tech-badge-sm">Tailwind</span>
+                            <span class="tech-badge-sm">Bootstrap</span>
+                        </div>
+                        <a href="#" class="text-accent font-semibold hover:text-primary transition text-sm flex items-center gap-1">
+                            View Details <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="py-20 bg-darker/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Education</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-dark border border-gray-800 p-6 rounded-lg flex items-start gap-4 card-lift" data-aos="fade-right">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-3 rounded-full flex-shrink-0">
+                        <i class="bi bi-mortarboard text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">B.Tech in CSE (AI & ML)</h3>
+                        <p class="text-gray-400">GSFC University, Vadodara | 2022 - 2026</p>
+                        <p class="text-sm text-primary mt-1">CGPA: 7.73</p>
+                    </div>
+                </div>
+                <div class="bg-dark border border-gray-800 p-6 rounded-lg flex items-start gap-4 card-lift" data-aos="fade-right" data-aos-delay="100">
+                    <div class="bg-gradient-to-br from-primary to-secondary p-3 rounded-full flex-shrink-0">
+                        <i class="bi bi-book text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Higher Secondary (HSC)</h3>
+                        <p class="text-gray-400">Amity High School, Bharuch | 2020 – 2022</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-4" data-aos="fade-up">Let's Connect</h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-12 rounded-full" data-aos="fade-up" data-aos-delay="100"></div>
+            
+            <div class="max-w-4xl mx-auto bg-dark border border-gray-800 rounded-xl p-8 md:p-12 shadow-2xl glow" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <i class="bi bi-envelope"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Email</p>
+                                    <a href="mailto:ahshah1306@gmail.com" class="font-semibold hover:text-primary transition">ahshah1306@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <i class="bi bi-telephone"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Phone</p>
+                                    <a href="tel:+919484996488" class="font-semibold hover:text-primary transition">+91-9484996488</a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                                    <i class="bi bi-geo-alt"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm text-gray-400">Location</p>
+                                    <p class="font-semibold">Ahmedabad, Gujarat, IN</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8 flex gap-4">
+                            <a href="https://linkedin.com/in/arya-shah-6a4047283" target="_blank" class="w-12 h-12 bg-[#0a66c2] rounded-full flex items-center justify-center hover:bg-[#095299] transition glow">
+                                <i class="bi bi-linkedin text-white text-xl"></i>
+                            </a>
+                            <a href="https://github.com/AryaShah13" target="_blank" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-gray-600 transition glow">
+                                <i class="bi bi-github text-white text-xl"></i>
+                            </a>
+                            <a href="mailto:ahshah1306@gmail.com" class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition glow">
+                                <i class="bi bi-envelope text-white text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <form class="space-y-4" id="contact-form">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                            <input type="text" name="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                            <input type="email" name="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                            <textarea name="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-semibold hover:opacity-90 transition glow">
+                            Send Message <i class="bi bi-send ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darker border-t border-gray-800 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="gradient-text font-bold text-lg">Arya Shah</p>
+            <p class="text-gray-500 text-sm mt-2">Building intelligent systems, one algorithm at a time.</p>
+            <p class="text-gray-600 text-xs mt-4">&copy; <span id="year"></span> All Rights Reserved.</p>
+            <p class="text-gray-700 text-xs mt-1 code-font">Crafted with ❤️ using HTML, Tailwind CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- AOS Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
